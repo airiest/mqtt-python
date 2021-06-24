@@ -3,9 +3,7 @@ import sys
 
 
 class MQTTClient:
-
     def __init__(self, clientid):
-        # MQTT CLIENT初期化
         self._mqttc = mqtt.Client(clientid)
         self._mqttc.on_message = self.mqtt_on_message
         self._mqttc.on_connect = self.mqtt_on_connect
